@@ -1,3 +1,15 @@
+使用简单方法
+这个主要是用来抓数据的
+
+go test ./datasource/base -run TestUpdateAllKLine 
+会只抓你选定的个股
+具体配置文件在
+datasource/base/tdx_kline_basic_test.go
+会把日志写到
+/root/.quant1x/1min/sz300/sz300773.csv
+可以通过 strace -ff -e trace=file go test ./datasource/base -run TestUpdateAllKLine 2>&1 | grep --color=auto "csv"
+
+
 Quant1X-Engine
 ===
 
